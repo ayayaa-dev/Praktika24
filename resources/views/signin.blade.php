@@ -11,7 +11,7 @@
             @endif
             <form action="{{ url('signin') }}" method="POST">
                 @csrf
-                <h1 class="text-center">Login</h1>                
+                <h1 class="text-center">Sign in</h1>                
                 <div>
                     <label>E-mail</label>
                     <input type="email" class="form-control" name="email" placeholder="Email" required autofocus>

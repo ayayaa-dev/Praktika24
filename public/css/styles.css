@@ -271,13 +271,10 @@ footer .rights p {
 /* Sign In / Sign Up (AKA Log in / Register) */
 .signIn, .signUp {
     width: 100%;
-    height: 50vh;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.signUp {
-    height: 105vh;
 }
 .signIn input, .signUp input {
     margin: 12px auto;

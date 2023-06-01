@@ -11,7 +11,7 @@
             @endif
             <form action="{{ url('signup') }}" method="POST">
                 @csrf
-                <h1 class="text-center">Register</h1>
+                <h1 class="text-center">Sign up</h1>
                 <div>
                     <label>Name</label>
                     <input type="text" class="form-control" name="name" placeholder="Name" required autofocus>
