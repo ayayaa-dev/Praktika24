@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="{{ asset('images/logo.png') }}" onclick="window.location='http://127.0.0.1:8000/'" alt="logo">
+            <img src="{{ asset('images/logo.png') }}" onclick="window.location='{{ url('/') }}'" alt="logo">
         </div>
         <nav>
             <ul>
@@ -48,13 +48,26 @@
     </div>
 
     <footer>
-
+        <div class="info">
+            <a href="/about">About</a>
+            <a href="/contacts">Contacts</a>
+            <a>Phone number: +372 699 1418</a>
+            <a>E-mail:info@praktika24.ee</a>
+        </div>
+        <div class="rights">
+            <p>©2023 Praktika24. All rights reserved.</p>
+        </div>
     </footer>
 
-    {{-- Bootstrap bundle --}}
+
+    {{-- Scripts --}}
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
