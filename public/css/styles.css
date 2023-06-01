@@ -7,11 +7,14 @@ html {
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #content {
     position: relative;
-    min-height: calc(100vh - 210px);
+    margin-top: 110px;
 }
 
 /* Header */
@@ -271,13 +274,10 @@ footer .rights p {
 /* Sign In / Sign Up (AKA Log in / Register) */
 .signIn, .signUp {
     width: 100%;
-    height: 50vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.signUp {
-    height: 105vh;
 }
 .signIn input, .signUp input {
     margin: 12px auto;
