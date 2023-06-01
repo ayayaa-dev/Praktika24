@@ -268,3 +268,30 @@ footer .rights p {
 }
 
 /* End of main page */
+/* Sign In / Sign Up (AKA Log in / Register) */
+.signIn, .signUp {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signUp {
+    height: 105vh;
+}
+.signIn input, .signUp input {
+    margin: 12px auto;
+}
+.signIn .card, .signUp .card {
+    width: 26rem;
+}
+.signIn .card .card-body, .signUp .card .card-body {
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.signIn .signInBtns, .signUp .signUpBtns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* End of Sign In / Sign Up */
