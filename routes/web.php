@@ -16,13 +16,13 @@ use App\Http\Controllers\Controller;
 */
 
 // Login / Logout
-Route::get('/signin', [AuthController::class, 'signin'])->name('signin'); // view login form page
-Route::post('/signin', [AuthController::class, 'authenticate']); // authenticate credentials in login form
-route::get('/signout', [AuthController::class, 'signout'])->name('signout'); // logout
+Route::get('/login', [AuthController::class, 'login'])->name('login'); // view login form page
+Route::post('/login', [AuthController::class, 'authenticate']); // authenticate credentials in login form
+route::get('/logout', [AuthController::class, 'logout'])->name('logout'); // logout
 
 // Registration
-Route::get('/signup', [AuthController::class, 'signup']);
-Route::post('/register', [UserController::class, 'register_store']);
+Route::get('/register', [AuthController::class, 'register']);
+Route::post('/signup', [UserController::class, 'register_store']);
 
 Route::get('/', function () {
     return view('welcome');

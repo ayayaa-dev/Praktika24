@@ -1,7 +1,7 @@
 @extends ('layouts/app')
 
 @section('content')
-<div class="signIn">
+<div class="logIn">
     <div class="card">
         <section class="card-body">
             @if(session()->get('error'))
@@ -9,9 +9,9 @@
                 {{ session()->get('error') }}
             </div>
             @endif
-            <form action="{{ url('signin') }}" method="POST">
+            <form action="{{ url('login') }}" method="POST">
                 @csrf
-                <h1 class="text-center">Sign in</h1>                
+                <h1 class="text-center">Log in</h1>                
                 <div>
                     <label>E-mail</label>
                     <input type="email" class="form-control" name="email" placeholder="Email" required autofocus>
@@ -20,9 +20,9 @@
                     <label>Password</label>
                     <input type="password" class="form-control" name="password" placeholder="Password" required>
                 </div>
-                <div class="signInBtns">
-                    <button type="submit" class="btn btn-primary submit" name="signIn">Sign in</button>
-                    <a href="/signup" class="btn btn-light">Sign up</a>
+                <div class="logInBtns">
+                    <button type="submit" class="btn btn-primary submit" name="signIn">Log in</button>
+                    <a href="/register" class="btn btn-light">Register</a>
                 </div>
             </form>
         </section>

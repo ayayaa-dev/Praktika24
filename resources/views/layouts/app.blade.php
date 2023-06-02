@@ -35,10 +35,10 @@
         </div>
         <div class="auth">
             <div>
-                <a href="/signin">Sign In</a>
+                <a href="/login">Log In</a>
             </div>
             <div>
-                <a href="/signup">Sign Up</a>
+                <a href="/register">Sign Up</a>
             </div>
         </div>
     </header>
