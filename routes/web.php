@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\InternshipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,8 @@ route::get('/logout', [AuthController::class, 'logout'])->name('logout'); // log
 Route::get('/register', [AuthController::class, 'register']);
 Route::post('/signup', [UserController::class, 'register_store']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contacts', function () {
-    return view('contacts');
-});
-Route::get('/contacts', [InternshipController::class, '']);
+Route::get('/', [Controller::class, 'home']);
+Route::get('/about', [Controller::class, 'about']);
+Route::get('/contacts', [Controller::class, 'contacts']);
+
+Route::get('/internships', [InternshipController::class, 'index']);

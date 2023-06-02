@@ -15,49 +15,52 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="{{ asset('images/logo.png') }}" onclick="window.location='{{ url('/') }}'" alt="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/internships">Internships</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contacts">Contacts</a></li>
-            </ul>
-        </nav>
-        <div class="search">
-            <form action="/search" method="GET">
-                <input type="text" class="form-control h-100" name="search" placeholder="Search...">
-                <button class="btn btn-primary h-100" type="submit">Search</button>
-            </form>
-        </div>
-        <div class="auth">
-            <div>
-                <a href="/login">Log In</a>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="{{ asset('images/logo.png') }}" onclick="window.location='{{ url('/') }}'"
+                    alt="logo">
             </div>
-            <div>
-                <a href="/register">Sign Up</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/internships">Internships</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <form action="/search" method="GET">
+                    <input type="text" class="form-control h-100" name="search" placeholder="Search...">
+                    <button class="btn btn-primary h-100" type="submit">Search</button>
+                </form>
             </div>
-        </div>
-    </header>
+            <div class="auth">
+                <div>
+                    <a href="/login">Log In</a>
+                </div>
+                <div>
+                    <a href="/register">Sign Up</a>
+                </div>
+            </div>
+        </header>
 
-    <div id="content">
-        @yield('content')
+        <div id="content">
+            @yield('content')
+        </div>
+
+        <footer>
+            <div class="info">
+                <a class="clickable" href="/about">About</a>
+                <a class="clickable" href="/contacts">Contacts</a>
+                <a>Phone number: &nbsp;<a class="clickable" href="tel:+3726991418">+372 699 1418</a></a>
+                <a>E-mail: &nbsp;<a class="clickable" href="mailto:info@praktika24.ee">info@praktika24.ee</a></a>
+            </div>
+            <div class="rights">
+                <p>©2023 Praktika24. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-
-    <footer>
-        <div class="info">
-            <a href="/about">About</a>
-            <a href="/contacts">Contacts</a>
-            <a>Phone number: +372 699 1418</a>
-            <a>E-mail:info@praktika24.ee</a>
-        </div>
-        <div class="rights">
-            <p>©2023 Praktika24. All rights reserved.</p>
-        </div>
-    </footer>
 
 
     {{-- Scripts --}}

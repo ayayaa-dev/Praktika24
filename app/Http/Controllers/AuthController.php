@@ -8,29 +8,33 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function login(){
+    public function login()
+    {
         return view('login');
     }
     // authenticate login form
-    public function authenticate(Request $request){
+    public function authenticate(Request $request)
+    {
         $request->validate([
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)) {
             // return redirect('dashboard');
             return redirect('/');
         }
         return redirect('login')->with('error', 'Oops! You entered invalid credentials');
     }
     // logout
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
         return redirect('/');
     }
 
-    public function register(){
+    public function register()
+    {
         return view('register');
     }
 }

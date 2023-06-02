@@ -5,21 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Internship extends Model
+class CompanyIndustries extends Model
 {
     use HasFactory;
 
-    protected $table = 'internships';
+    protected $table = 'company_industries';
     protected $fillable = [
-        'name',
-        'description',
         'companyId',
-        'userId',
         'industryId',
-        'startDate',
-        'endDate',
-        'payment',
-        'status',
     ];
     public function company()
     {
@@ -28,9 +21,5 @@ class Internship extends Model
     public function industry()
     {
         return $this->belongsTo(Industry::class);
-    }
-    public function user()
-    {
-        return $this->belongsTo(User::class);
     }
 }

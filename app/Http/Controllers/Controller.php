@@ -9,4 +9,17 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+    
+    public function home()
+    {
+        return view('welcome');
+    }
+    public function about()
+    {
+        return view('about');
+    }
+    public function contacts()
+    {
+        return view('contacts');
+    }
 }

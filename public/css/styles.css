@@ -7,7 +7,7 @@ html {
 
 body {
     margin: 0;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Inter';
@@ -16,6 +16,11 @@ body {
 #content {
     position: relative;
     margin-top: 110px;
+    flex: 1 1 auto;
+}
+
+.wrapper {
+    display: contents;
 }
 
 .heading-line {
@@ -47,6 +52,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 0 1 auto;
 }
 
 header .logo {
@@ -98,7 +104,7 @@ header .search {
 
 header .search form {
     width: 100%;
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,11 +179,13 @@ header .auth a:hover {
 footer {
     width: 100%;
     height: 100px;
+    min-height: 100px;
     background-color: #EEEFF1;
     position: relative;
     bottom: 0;
     margin-top: auto;
     display: flex;
+    flex: 0 1 100px;
 }
 
 footer .info {
@@ -200,14 +208,13 @@ footer .info a {
 
 footer .info a:nth-child(1)::after,
 footer .info a:nth-child(2)::after,
-footer .info a:nth-child(3)::after {
+footer .info a:nth-child(4)::after {
     content: '|';
     display: block;
     margin: 0 32px;
 }
 
-footer .info a:nth-child(1):hover,
-footer .info a:nth-child(2):hover {
+footer .info a.clickable:hover {
     color: #000 !important;
 }
 
@@ -436,3 +443,117 @@ footer .rights p {
 }
 
 /* End of contacts page */
+
+/* Internships page */
+
+.internship-page {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #244DD1;
+}
+
+.internship-page .top-container {
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+.internship-page h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.internship-list {
+    width: 85%;
+    margin: 15px auto;
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.internship-list .internship {
+    width: 30%;
+    height: 450px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    list-style: none;
+}
+
+.internship-list .internship .img-container {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.internship-list .internship .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.internship-list .internship .info {
+    height: 130px;
+    padding: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.internship-list .internship .info div {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.internship-list h3 {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.internship-list h4 {
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+}
+
+.internship-list p {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.internship-list .internship .info .btn-container {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
+
+.internship-list .internship .info .btn-container a {
+    border-radius: 0;
+    background-color: #244DD1;
+    margin-bottom: 7px;
+    transition: ease all .3s;
+}
+
+.internship-list .internship .info .btn-container a:hover {
+    background-color: #fff;
+    border-color: #244DD1;
+    color: #244DD1;
+}
+
+/* End of internships page */
