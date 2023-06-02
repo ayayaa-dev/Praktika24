@@ -39,4 +39,4 @@
             </form>
         </section>
     </div>
-</div>
+@endsection

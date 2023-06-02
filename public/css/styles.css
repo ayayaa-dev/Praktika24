@@ -145,6 +145,10 @@ header .auth a {
     text-align: center;
 }
 
+header .auth a:hover {
+    color: #244DD1;
+}
+
 /* End of Header */
 
 
@@ -213,7 +217,6 @@ footer .rights p {
 #carousel {
     width: 100%;
     height: 540px;
-    margin-top: 110px;
 }
 
 #carousel .carousel-indicators button {
@@ -271,28 +274,47 @@ footer .rights p {
 }
 
 /* End of main page */
-/* Log in / Register */
-.logIn, .register {
+
+/* Sign In / Sign Up (AKA Log in / Register) */
+.logIn,
+.register {
     width: 100%;
-    margin-top: 150px;
-    height: 100%;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logIn input, .register input {
-    margin: 12px auto;
+
+.logIn input,
+.register input {
+    margin-top: 3px;
+    margin-bottom: 9px;
 }
-.logIn .card, .register .card {
+
+.logIn .card,
+.register .card {
     width: 26rem;
 }
-.logIn .card .card-body, .register .card .card-body {
+
+.logIn .card .card-body,
+.register .card .card-body {
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.logIn .logInBtns, .register .registerBtns {
+
+.logIn .logInBtns,
+.register .registerBtns {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
-/* End of Log In / Register */
+
+.logIn .logInBtns a,
+.logIn .logInBtns button,
+.register .registerBtns a,
+.register .registerBtns button {
+    width: 47% !important;
+    margin-top: 10px;
+}
+
+/* End of Sign In / Sign Up */
