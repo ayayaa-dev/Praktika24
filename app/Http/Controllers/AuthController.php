@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function signin(){
-        return view('signin');
+    public function login(){
+        return view('login');
     }
     // authenticate login form
     public function authenticate(Request $request){
@@ -22,15 +22,15 @@ class AuthController extends Controller
             // return redirect('dashboard');
             return redirect('/');
         }
-        return redirect('signin')->with('error', 'Oops! You entered invalid credentials');
+        return redirect('login')->with('error', 'Oops! You entered invalid credentials');
     }
     // logout
-    public function signout(){
-        Auth::signout();
+    public function logout(){
+        Auth::logout();
         return redirect('/');
     }
 
-    public function signup(){
-        return view('signup');
+    public function register(){
+        return view('register');
     }
 }
