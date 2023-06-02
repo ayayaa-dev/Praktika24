@@ -7,96 +7,26 @@
             <div class="heading-line"></div>
         </div>
         <ul class="internship-list">
-            <li class="internship">
-                <div class="img-container">
-                    <img src="{{ asset('images/forklift-driver.jpg') }}" alt="">
-                </div>
-                <div class="info">
-                    <div>
-                        <h3>Forklift driver</h3>
-                        <h4>Farmi Piimatööstus AS</h4>
-                        <p><span>Maardu</span> linn</p>
+            @foreach ($internships as $internship)
+                <li class="internship">
+                    <div class="img-container">
+                        <img src="{{ asset('images/forklift-driver.jpg') }}" alt="">
                     </div>
-                    <div class="btn-container">
-                        <a href="{{ url('/internship') }}" class="btn btn-primary w-75">More info</a>
+                    <div class="info">
+                        <div>
+                            <h3>{{ $internship->name }}</h3>
+                            <h4>{{ $internship->companyName }}</h4>
+                            <p><span>{{ $internship->cityId }}</span> linn</p>
+                        </div>
+                        <div class="btn-container">
+                            <a href="{{ url('internship/' . $internship->id) }}" class="btn btn-primary w-75">More info</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="internship">
-                <div class="img-container">
-                    <img src="{{ asset('images/forklift-driver.jpg') }}" alt="">
-                </div>
-                <div class="info">
-                    <div>
-                        <h3>Forklift driver</h3>
-                        <h4>Farmi Piimatööstus AS</h4>
-                        <p><span>Maardu</span> linn</p>
-                    </div>
-                    <div class="btn-container">
-                        <a href="{{ url('/internship') }}" class="btn btn-primary w-75">More info</a>
-                    </div>
-                </div>
-            </li>
-            <li class="internship">
-                <div class="img-container">
-                    <img src="{{ asset('images/forklift-driver.jpg') }}" alt="">
-                </div>
-                <div class="info">
-                    <div>
-                        <h3>Forklift driver</h3>
-                        <h4>Farmi Piimatööstus AS</h4>
-                        <p><span>Maardu</span> linn</p>
-                    </div>
-                    <div class="btn-container">
-                        <a href="{{ url('/internship') }}" class="btn btn-primary w-75">More info</a>
-                    </div>
-                </div>
-            </li>
-            <li class="internship">
-                <div class="img-container">
-                    <img src="{{ asset('images/forklift-driver.jpg') }}" alt="">
-                </div>
-                <div class="info">
-                    <div>
-                        <h3>Forklift driver</h3>
-                        <h4>Farmi Piimatööstus AS</h4>
-                        <p><span>Maardu</span> linn</p>
-                    </div>
-                    <div class="btn-container">
-                        <a href="{{ url('/internship') }}" class="btn btn-primary w-75">More info</a>
-                    </div>
-                </div>
-            </li>
-            <li class="internship">
-                <div class="img-container">
-                    <img src="{{ asset('images/forklift-driver.jpg') }}" alt="">
-                </div>
-                <div class="info">
-                    <div>
-                        <h3>Forklift driver</h3>
-                        <h4>Farmi Piimatööstus AS</h4>
-                        <p><span>Maardu</span> linn</p>
-                    </div>
-                    <div class="btn-container">
-                        <a href="{{ url('/internship') }}" class="btn btn-primary w-75">More info</a>
-                    </div>
-                </div>
-            </li>
-            <li class="internship">
-                <div class="img-container">
-                    <img src="{{ asset('images/forklift-driver.jpg') }}" alt="">
-                </div>
-                <div class="info">
-                    <div>
-                        <h3>Forklift driver</h3>
-                        <h4>Farmi Piimatööstus AS</h4>
-                        <p><span>Maardu</span> linn</p>
-                    </div>
-                    <div class="btn-container">
-                        <a href="{{ url('/internship') }}" class="btn btn-primary w-75">More info</a>
-                    </div>
-                </div>
-            </li>
+                </li>
+            @endforeach
         </ul>
+        <div class="pagination">
+            {!! $internships->links() !!}
+        </div>
     </div>
 @endsection

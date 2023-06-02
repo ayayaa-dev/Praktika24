@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Internship;
 use Illuminate\Http\Request;
+use \Illuminate\Support\Facades\DB;
 
 class InternshipController extends Controller
 {
@@ -12,7 +13,14 @@ class InternshipController extends Controller
      */
     public function index()
     {
-        return view('internships');
+        // $internships = Internship::paginate(6);
+        $internships = DB::table('internships')
+            ->join('companies', 'internships.companyId', '=', 'companies.id')
+            ->join('industries', 'internships.industryId', '=', 'industries.id')
+            ->join('cities', 'internships.cityId', '=', 'cities.id')
+            ->select('internships.*', 'companies.name as companyName', 'industries.name as industryName')
+            ->paginate(1);
+        return view('internships', compact('internships'));
     }
 
     /**
