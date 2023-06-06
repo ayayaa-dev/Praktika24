@@ -40,7 +40,7 @@
                     <a href="/login">Log In</a>
                 </div>
                 <div>
-                    <a href="/register">Sign Up</a>
+                    <a href="/register">Register</a>
                 </div>
             </div>
         </header>
